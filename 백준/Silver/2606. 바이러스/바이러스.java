@@ -41,7 +41,7 @@ public class Main {
                 HashSet<Integer> set1 = temp.get(0);
                 HashSet<Integer> set2 = temp.get(1);
                 set1.addAll(set2);
-                set2.clear();
+                list.removeIf((set) -> (set == set2));
             } else if(temp.isEmpty()) {
                 list.add(new HashSet<>(Arrays.asList(first, second)));
             }
